@@ -18,41 +18,106 @@ From this single prompt, Claude AI guided the entire development process, from e
 
 ### The diagram below illustrates how information flows through the VoyaTrek application:
 
-<center>
-<img src="Voyatrek WF.png" width="450">
-<br>
-<em>VoyaTrek workflow showing the complete process from user input to visualization</em>
-</center>
+<div align="center">
+  <img src="Voyatrek WF.png" width="550">
+  <br>
+  <em>VoyaTrek workflow showing the complete process from user input to visualization</em>
+</div>
+
 # Application Interface
 
 ### The VoyaTrek application features a color-coded interface with distinct visual themes for each function:
 
-<center>
-<img src="Main Menu Card.png" width="450">
-<br>
-<em>Fig 1. Main Menu (Blue) - Central navigation hub providing access to all features</em>
-</center>
+<div align="center">
+  <img src="Main Menu Card.png" width="450">
+  <br>
+  <em>Fig 1. Main Menu (Blue) - Central navigation hub providing access to all features</em>
+</div>
 
 ---
 
-<center>
-<img src="Stats Card.png" width="450">
-<br>
-<em>Fig 2. Statistics View (Green) - Personal progress tracking with step totals and streaks</em>
-</center>
+<div align="center">
+  <img src="Stats Card.png" width="450">
+  <br>
+  <em>Fig 2. Statistics View (Green) - Personal progress tracking with step totals and streaks</em>
+</div>
 
 ---
 
-<center>
-<img src="Leaderboard Card.png" width="450">
-<br>
-<em>Fig 3. Leaderboard (Gold) - Company-wide competition with medals for top performers</em>
-</center>
+<div align="center">
+  <img src="Leaderboard Card.png" width="450">
+  <br>
+  <em>Fig 3. Leaderboard (Gold) - Company-wide competition with medals for top performers</em>
+</div>
 
 ---
 
-<center>
-<img src="Log Steps Card.png" width="450">
-<br>
-<em>Fig 4. Step Logging (Orange) - Interface for recording daily step counts</em>
-</center>
+<div align="center">
+  <img src="Log Steps Card.png" width="450">
+  <br>
+  <em>Fig 4. Step Logging (Orange) - Interface for recording daily step counts</em>
+</div>
+
+
+## I. Project Overview
+
+**VoyaTrek** is a Microsoft Teams plugin developed to support the company's summer walkathon initiative. The application allows employees to easily log their daily step counts directly within Microsoft Teams, view their personal statistics, and participate in friendly competition through a leaderboard system.
+
+- ### 1. Purpose
+  - Enable employees to track their step counts for the company walkathon
+  - Provide a simple, intuitive interface integrated with Microsoft Teams
+  - Foster friendly competition and encourage physical activity
+
+- ### 2. Core Features
+  - Natural language step logging through Teams chat
+  - Personal statistics tracking with streak monitoring
+  - Company-wide leaderboard
+  - Interactive, color-coded user interface
+
+- ### 3. Technology Stack
+  - **Frontend**: Microsoft Teams Adaptive Cards
+  - **Backend**: Node.js with Bot Framework SDK
+  - **Database**: PostgreSQL on Azure
+  - **Hosting**: Azure App Service
+
+- ### 4. Functionality
+
+VoyaTrek allows users to input step counts using natural language within Microsoft Teams. The primary command format is:
+
+```
+@voyatrek [number] steps [date]
+```
+
+Example commands:
+- `@voyatrek 10000 steps yesterday`
+- `@voyatrek 8000 steps today`
+- `@voyatrek 12500 steps 2025-02-15`
+
+The plugin processes these messages by:
+1. Parsing the step count (e.g., "10000")
+2. Interpreting the date (e.g., calculating "yesterday" as the previous day)
+3. Recording the entry in the Azure PostgreSQL database with the username, step count, and date
+
+Additional commands provide access to statistics and leaderboards:
+- `@voyatrek stats` - View personal step statistics
+- `@voyatrek leaderboard` - View company-wide rankings
+- `@voyatrek log` - Access the step logging interface
+
+The application features an intuitive, color-coded interface with distinct visual themes for each function:
+- Main menu (blue) - Central navigation hub
+- Statistics (green) - Personal progress tracking
+- Leaderboard (gold) - Company-wide competition
+- Step logging (orange) - Data entry
+
+- ### 5. Implementation Approach
+
+The development leveraged AI assistance to:
+1. Design the application architecture
+2. Generate the core application code
+3. Implement database connectivity and data processing
+4. Create an intuitive and visually appealing user interface
+5. Develop deployment and configuration instructions
+
+The resulting application is secure, user-friendly, and ready for company-wide deployment to support the summer walkathon initiative.
+
+### Please see PDF "VoyaTrek- AI-Powered Step Tracking for Microsoft Teams" for the whole documentation. 
