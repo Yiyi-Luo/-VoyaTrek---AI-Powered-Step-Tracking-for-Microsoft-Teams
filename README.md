@@ -19,7 +19,40 @@ From this single prompt, Claude AI guided the entire development process, from e
 ### The diagram below illustrates how information flows through the VoyaTrek application:
 
 <center>
-<img src="Voyatrek WF.png" width="550">
+<img src="Voyatrek WF.png" width="450">
 <br>
 <em>VoyaTrek workflow showing the complete process from user input to visualization</em>
+</center>
+# Application Interface
+
+### The VoyaTrek application features a color-coded interface with distinct visual themes for each function:
+
+<center>
+<img src="Main Menu Card.png" width="450">
+<br>
+<em>Fig 1. Main Menu (Blue) - Central navigation hub providing access to all features</em>
+</center>
+
+---
+
+<center>
+<img src="Stats Card.png" width="450">
+<br>
+<em>Fig 2. Statistics View (Green) - Personal progress tracking with step totals and streaks</em>
+</center>
+
+---
+
+<center>
+<img src="Leaderboard Card.png" width="450">
+<br>
+<em>Fig 3. Leaderboard (Gold) - Company-wide competition with medals for top performers</em>
+</center>
+
+---
+
+<center>
+<img src="Log Steps Card.png" width="450">
+<br>
+<em>Fig 4. Step Logging (Orange) - Interface for recording daily step counts</em>
 </center>
